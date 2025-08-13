@@ -19,6 +19,8 @@
 		3ED4EEA62E49AB53005F7D90 /* ChessCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED4EEA52E49AB53005F7D90 /* ChessCloneTests.swift */; };
 		3ED4EEB02E49AB53005F7D90 /* ChessCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED4EEAF2E49AB53005F7D90 /* ChessCloneUITests.swift */; };
 		3ED4EEB22E49AB53005F7D90 /* ChessCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED4EEB12E49AB53005F7D90 /* ChessCloneUITestsLaunchTests.swift */; };
+		3EEAD12E2E4C4F3100E99E26 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAD12D2E4C4F3100E99E26 /* HomeView.swift */; };
+		3EEAD1302E4C50FE00E99E26 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEAD12F2E4C50FE00E99E26 /* HomePageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		3ED4EEAB2E49AB53005F7D90 /* ChessCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChessCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED4EEAF2E49AB53005F7D90 /* ChessCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessCloneUITests.swift; sourceTree = "<group>"; };
 		3ED4EEB12E49AB53005F7D90 /* ChessCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3EEAD12D2E4C4F3100E99E26 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3EEAD12F2E4C50FE00E99E26 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 		3ED4EE882E49AB51005F7D90 = {
 			isa = PBXGroup;
 			children = (
+				3EEAD12F2E4C50FE00E99E26 /* HomePageView.swift */,
+				3EEAD12D2E4C4F3100E99E26 /* HomeView.swift */,
 				3EA33A0C2E4B1B43001B309A /* ColorComponent.swift */,
 				3EA33A0A2E4B18FE001B309A /* LoginView.swift */,
 				3ED4EE932E49AB51005F7D90 /* ChessClone */,
@@ -274,9 +280,11 @@
 			files = (
 				3ED4EE972E49AB51005F7D90 /* ContentView.swift in Sources */,
 				3EA33A052E4B1791001B309A /* ChessBoardView.swift in Sources */,
+				3EEAD1302E4C50FE00E99E26 /* HomePageView.swift in Sources */,
 				3EA33A0B2E4B18FE001B309A /* LoginView.swift in Sources */,
 				3EA33A072E4B17BE001B309A /* ChessGame.swift in Sources */,
 				3ED4EE952E49AB51005F7D90 /* ChessCloneApp.swift in Sources */,
+				3EEAD12E2E4C4F3100E99E26 /* HomeView.swift in Sources */,
 				3EA33A092E4B17D4001B309A /* GameView.swift in Sources */,
 				3EA33A0D2E4B1B43001B309A /* ColorComponent.swift in Sources */,
 			);
