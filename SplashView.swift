@@ -7,11 +7,11 @@ struct SplashView: View {
     
     var body: some View {
         if isActive {
-            HomePageView()
+            ChessLoginView()
         } else {
             ZStack {
                 LinearGradient(
-                    gradient: Gradient(colors: [Color.black, Color.gray.opacity(0.8)]),
+                    gradient: Gradient(colors: [Color.gray, Color.gray.opacity(0.8)]),
                     startPoint: .topLeading,
                     endPoint: .bottomTrailing
                 )
@@ -21,15 +21,15 @@ struct SplashView: View {
                     Image("logochess")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 150, height: 150)
+                        .frame(width: 250, height: 250)
                         .scaleEffect(logoScale)
                         .opacity(logoOpacity)
                     
-                    Text("Chess.com")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .opacity(logoOpacity)
+//                    Text("Chess.com")
+//                        .font(.largeTitle)
+//                        .fontWeight(.bold)
+//                        .foregroundColor(.white)
+//                        .opacity(logoOpacity)
                 }
             }
             .onAppear {
