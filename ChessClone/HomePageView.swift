@@ -1,13 +1,15 @@
 import SwiftUI
 
 struct HomePageView: View {
+    @StateObject private var router = NavigationRouter()
     @State private var selectedTab = 0
     @State private var showPlayVsComputerPopup = false
     
     var body: some View {
-        ZStack {
-            Color(red: 27/255, green: 27/255, blue: 27/255)
-                .edgesIgnoringSafeArea(.all)
+        NavigationStack(path: $router.path) {
+            ZStack {
+                Color(red: 27/255, green: 27/255, blue: 27/255)
+                    .edgesIgnoringSafeArea(.all)
             
             VStack(spacing: 0) {
                 HStack {
@@ -71,7 +73,11 @@ struct HomePageView: View {
                         
                         HStack{
                             VStack(spacing: 14) {
-                                ChessMenuButton(iconName: "Screenshot_2025-08-13_at_13.20.21-removebg-preview", title: "New Game") { }
+                                Button(action: {
+                                    router.navigate(to: .playBots)
+                                }) {
+                                    ChessMenuButton(iconName: "Screenshot_2025-08-13_at_13.20.21-removebg-preview", title: "Play Bots") { }
+                                }
                                 ChessMenuButton(iconName: "Screenshot_2025-08-13_at_13.20.35-removebg-preview", title: "vs Computer") {
                                     showPlayVsComputerPopup = true
                                 }
@@ -163,6 +169,20 @@ struct HomePageView: View {
             }
         }
         .navigationBarHidden(true)
+        .navigationDestination(for: NavigationDestination.self) { destination in
+            switch destination {
+            case .playBots:
+                PlayBotsLandingView(router: router)
+            case .botSelection:
+                BotSelectionView(router: router)
+            case .preGameLobby(let bot):
+                PreGameLobbyView(router: router, selectedBot: bot)
+            case .activeGame(let bot):
+                ActiveGameView(router: router, selectedBot: bot)
+            case .gameResult(let result):
+                GameResultView(router: router, gameResult: result)
+            }
+        }
     }
 }
 

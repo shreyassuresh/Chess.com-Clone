@@ -12,6 +12,7 @@ struct ChessCloneApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+      
         }
     }
 }

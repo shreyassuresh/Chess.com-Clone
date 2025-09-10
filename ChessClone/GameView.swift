@@ -210,3 +210,6 @@ struct GameMenuButton: View {
         .buttonStyle(PlainButtonStyle())
     }
 }
+#Preview{
+    ChessGameView()
+}
